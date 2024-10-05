@@ -67,7 +67,7 @@
 }
 .datos-padres-papas-novia p,
 .datos-padres-papas-novio p{
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
 }
 .datos-padres-padrinos{
@@ -86,8 +86,18 @@
   justify-content: space-around;
 }
 .datos-padres-padrinos-nombres p{
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
+}
+@media (min-width: 768px) {
+    .datos-padres{
+      width: 60%;
+    }
+    .datos-padres-papas-novia p,
+    .datos-padres-papas-novio p,
+    .datos-padres-padrinos p{
+      font-size: 16px;
+    }
 }
 
 .fecha{
@@ -97,6 +107,11 @@
   flex-direction: column; 
   align-items: center;
   
+}
+@media (min-width: 768px) {
+    .fecha{
+      width: 30%;
+    }
 }
 .fecha-tittle{
   font-style: italic;
@@ -231,10 +246,22 @@
   justify-content: space-around;
   align-items: center;
 }
+@media (min-width: 768px) {
+    .regalos-vestimenta-body{
+      flex-direction: column;
+    }
+}
 .regalos-vestimenta-body-colors{
   width: 50%;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+    .regalos-vestimenta-body-colors{
+      margin-top: 20px;
+      justify-content: center;
+      gap: 20px;
+    }
 }
 .regalos-vestimenta-body-colors_color1,
 .regalos-vestimenta-body-colors_color2,

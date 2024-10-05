@@ -32,7 +32,7 @@ const TimeLine = () => {
 
     {
       id:3,
-      time:'20:00 Hrs',
+      time:'16:00 a 17:00Hrs',
       name:'Protocolo',
       icon:'brindis',
       color:'var(--color_timeline)',
@@ -41,8 +41,8 @@ const TimeLine = () => {
 
     {
       id:4,
-      time:'22:00 Hrs',
-      name:'Comida',
+      time:'18:00 Hrs',
+      name:'Banquete',
       icon:'comida',
       color:'var(--color_timeline)',
       textColor:'rgb(218 167 88)'

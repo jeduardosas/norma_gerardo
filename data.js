@@ -2,7 +2,7 @@ const data = {
   event_type:'boda',
   nombre_novia:'Norma',
   nombre_novio:'Gerardo',
-  nombre_papa_novia:'Santos Hernández Sánchez',
+  nombre_papa_novia:'Santos Hernández Sánchez ✞',
   nombre_mama_novia:'Julia Cruz Salgado',
   nombre_papa_novio:'Gerardo Morales Vergara',
   nombre_mama_novio:'Eva Luna Zavaleta',
