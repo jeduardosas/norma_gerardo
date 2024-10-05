@@ -58,9 +58,10 @@ const Invitacion = () => {
 
   const song = './music/song.mp3'
 
-  //estado para manejar la reproduccion del audio
-  const [play,setPlay] = useState(false);
+  
+  const [play,setPlay] = useState(false); //estado para manejar la reproduccion del audio
   const [modalIsOpen, setModalIsopen] = useState(true);//estado para manejar el modal
+  const [isPlaying,setIsPlaying] = useState(true); //estado para manejar si el audio esta en play o pausa
 
   //VALIDACION DE LOS PARAMS DE LA URL
   const location = useLocation();
@@ -84,6 +85,17 @@ const Invitacion = () => {
   const handlePlay = ()=>{
     setPlay(true);
     setModalIsopen(false)
+  }
+
+
+  //funciones para controlar el play y pausa de la musica
+  const handlePlayRepro = ()=>{
+    document.querySelector('audio').play();
+    setIsPlaying(true)
+  }
+  const handlePauseRepro = ()=>{
+    document.querySelector('audio').pause();
+    setIsPlaying(false)
   }
 
 
@@ -324,10 +336,14 @@ const Invitacion = () => {
                 preload="auto"
                 />
               
-                <button className="reproductor-boton" onClick={() => document.querySelector('audio').pause()}>
+                <button
+                  className={`reproductor-boton ${!isPlaying ? 'push' : ''}`} 
+                  onClick={handlePauseRepro}>
                   <img src="./icons/pausa.svg" alt="" />
                 </button>
-                <button className="reproductor-boton" onClick={() => document.querySelector('audio').play()}>
+                <button 
+                  className={`reproductor-boton ${isPlaying ? 'push' : ''}`} 
+                  onClick={handlePlayRepro}>
                   <img src="./icons/play.svg" alt="" />
                 </button>
               
