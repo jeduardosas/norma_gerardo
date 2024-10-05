@@ -22,7 +22,7 @@
   font-size: 16px;
   font-style: italic;
   text-align: center;
-  color: #6e6e6e;
+  color: #8d5641;
 }
 .contador_imagen img{
   width: 100%;
@@ -42,6 +42,53 @@
 }
 
 /*::::::::: D A T O S ::::::::::*/
+.datos-padres{
+  width: 100%;
+  margin-bottom: 50px;
+}
+.datos-padres-tittle{
+  font-size: 18px;
+  color: #6e6e6e;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.datos-padres-papas{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.datos-padres-papas-novia,
+.datos-padres-papas-novio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.datos-padres-papas-novia p,
+.datos-padres-papas-novio p{
+  font-size: 14px;
+  font-style: italic;
+}
+.datos-padres-padrinos{
+  width: 100%;
+  margin-top: 30px;
+}
+.datos-padres-padrinos-tittle{
+  margin-bottom: 15px;
+  color: #6e6e6e;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+.datos-padres-padrinos-nombres{
+  display: flex;
+  justify-content: space-around;
+}
+.datos-padres-padrinos-nombres p{
+  font-size: 14px;
+  font-style: italic;
+}
 
 .fecha{
   width: 100%;
@@ -93,7 +140,7 @@
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color:#6e6e6e;
+  color:#8d5641;
 }
 .datos-item{
   padding: 20px;
@@ -159,7 +206,7 @@
   padding: 10px;
   border-top-right-radius: 20px;
   border-bottom-left-radius:20px ;
-  background-color: var(--color_principal);
+  background-color: #8d5641;
 }
 .datos-item-fotter-button a{
   color: #f5f0ea;
@@ -170,7 +217,7 @@
 .regalos{
   width: 100%;
   margin-top: 50px;
-  background-color: var(--color_principal);
+  background-color: #cfa999;
   padding: 30px;
   box-sizing: border-box;
 }
@@ -178,7 +225,37 @@
 .regalos-sobres{
   margin-bottom: 50px;
 }
-
+.regalos-vestimenta-body{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.regalos-vestimenta-body-colors{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.regalos-vestimenta-body-colors_color1,
+.regalos-vestimenta-body-colors_color2,
+.regalos-vestimenta-body-colors_color3,
+.regalos-vestimenta-body-colors_color4{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.regalos-vestimenta-body-colors_color1{
+  background-color: #626047;
+}
+.regalos-vestimenta-body-colors_color2{
+  background-color: #8d5641;
+}
+.regalos-vestimenta-body-colors_color3{
+  background-color: #c56f4e;
+}
+.regalos-vestimenta-body-colors_color4{
+  background-color: #c4917c;
+}
 .regalos-sobres,
 .regalos-mesa,
 .regalos-vestimenta{
@@ -208,7 +285,7 @@
 .regalos-sobres-tittle h3,
 .regalos-mesa-tittle h3,
 .regalos-vestimenta-tittle h3{
-  color: #6e6e6e;
+  color: #8d5641;
   letter-spacing: 2px;
   font-style: italic;
 }
@@ -220,9 +297,11 @@
 .regalos.vestimenta-body{
   width: 100%;
 }
-.regalos-sobres-body p,
-.regalos-mesa-body p,
 .regalos-vestimenta-body p{
+  color: #f5f0ea;
+}
+.regalos-sobres-body p,
+.regalos-mesa-body p{
   margin-top: 15px;
   color:#f5f0ea;
 }
@@ -270,7 +349,7 @@
   margin-bottom: 20px;
   text-align: center;
   font-size: 30px;
-  color:#6e6e6e;
+  color:#8d5641;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -335,7 +414,7 @@
   border-bottom-left-radius:90px;
   width: 90%;
   margin: 0 auto;
-  padding:15px;
+  padding:30px 15px;
 }
 .confirmacion-item-tittle{
   display: flex;
@@ -361,19 +440,34 @@
 .confirmacion-item-body p{
   font-size: 18px;
 }
-.confirmacion-item-fotter{
-  margin-top: 30px;
+.confirmacion-item-body-items{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content:center;
+  align-items: center;
+  gap: 20px;
 }
-.confirmacion-item-fotter button{
+.confirmacion-item-body-items-novia,
+.confirmacion-item-body-items-novio{
+  margin-top: 30px;
+  display: flex;
+
+}
+.confirmacion-item-body-items-novia img{
+  width: 70px;
+}
+.confirmacion-item-body-items-novio img{
+  width: 50px;
+}
+.confirmacion-item-body-items-novia button,
+.confirmacion-item-body-items-novio button{
   padding: 10px;
   border-top-right-radius: 20px;
   border-bottom-left-radius:20px ;
-  background-color: var(--color_principal);
+  background-color:#8d5641;
 }
-.confirmacion-item-fotter button a{
+.confirmacion-item-body-items-novia a,
+.confirmacion-item-body-items-novio a{
   color: #f5f0ea;
   font-family: var(--fuenteSecundaria);
 }

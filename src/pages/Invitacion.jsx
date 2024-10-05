@@ -23,7 +23,7 @@ const customStyles = {
     textAlign:'center',
     border:'none',
     boxShadow:'10px 10px 10px #bdbdbd',
-    backgroundColor:'var(--color_principal)',
+    backgroundColor:'#cfa999',
 
   },
 };
@@ -34,6 +34,12 @@ const Invitacion = () => {
           fecha_mes,
           fecha_year,
           frase,
+          nombre_papa_novia,
+          nombre_mama_novia,
+          nombre_papa_novio,
+          nombre_mama_novio,
+          nombre_padrino,
+          nombre_madrina,
           religiosa_lugar,
           religiosa_direccion,
           religiosa_direccion_col,
@@ -48,7 +54,7 @@ const Invitacion = () => {
           recepcion_direccion_col,
           recepcion_direccion_cd,
           recepcion_ubicacion,
-          regalos_url} = data
+          confirmacion_novio} = data
 
   const song = './music/song.mp3'
 
@@ -120,10 +126,30 @@ const Invitacion = () => {
             </section>
 
             <div className="contador_imagen">
-                <img src="./img/back_.webp" alt="imagen_2" />
+                <img src="./img/banner1.webp" alt="imagen_2" />
             </div>
       
             <section className="datos centrar">
+              <section className="datos-padres">
+                <h2 className="datos-padres-tittle">En compañia de nuestros Padres</h2>
+                <div className="datos-padres-papas">
+                  <div className="datos-padres-papas-novia">
+                    <p>{nombre_mama_novia}</p>
+                    <p>{nombre_papa_novia}</p>
+                  </div>
+                  <div className="datos-padres-papas-novio">
+                    <p>{nombre_mama_novio}</p>
+                    <p>{nombre_papa_novio}</p>
+                  </div>
+                </div>
+                <div className="datos-padres-padrinos">
+                  <h3 className="datos-padres-padrinos-tittle">Y nuestros Padrinos</h3>
+                  <div className="datos-padres-padrinos-nombres">
+                    <p>{nombre_madrina}</p>
+                    <p>{nombre_padrino}</p>
+                  </div>
+                </div>
+              </section>
               <h2 className="datos-tittle">¡Nos Casamos!</h2>
 
               <section className='fecha'>
@@ -205,10 +231,6 @@ const Invitacion = () => {
 
             </section>
 
-            <div className="contador_imagen">
-                <img src="./img/banner.webp" alt="imagen_2" />
-            </div>
-
             {/*::::::::::T I M E L I N E:::::::::: */}
             <TimeLine />
 
@@ -216,40 +238,33 @@ const Invitacion = () => {
 
             <section className="regalos">
 
-            <div className="regalos-vestimenta">
+              <div className="regalos-vestimenta">
                 <div className="regalos-vestimenta-tittle">
                   <img src="./icons/vestimenta.svg" alt="" />
                   <h3>Código de Vestimenta</h3>
                 </div>
                 <div className="regalos-vestimenta-body">
-                  <p>Etiqueta Formal</p>
+                  <p>Formal</p>
+                  <div className="regalos-vestimenta-body-colors">
+                    <div className="regalos-vestimenta-body-colors_color1"></div>
+                    <div className="regalos-vestimenta-body-colors_color2"></div>
+                    <div className="regalos-vestimenta-body-colors_color3"></div>
+                    <div className="regalos-vestimenta-body-colors_color4"></div>
+                  </div>
                 </div>
               </div>
 
               <div className="regalos-sobres">
                 <div className="regalos-sobres-tittle">
                   <img src="./icons/sobres.svg" alt="" />
-                  <h3>Lluvia de Sobres</h3>
+                  <h3>Regalos</h3>
                 </div>
                 <div className="regalos-sobres-body">
-                  <p>Durante la recepción se te otorgará un sobre para depositar tu obsequio en efectivo.</p>
+                  <p>Si deseas tener un detalle con nostros, puede ser en efectivo. Gracias</p>
                 </div>
               </div>
 
-              <div className="regalos-mesa">
-                <div className="regalos-mesa-tittle">
-                  <img src="./icons/regalo.svg" alt="" />
-                  <h3>Mesa de Regalos</h3>
-                </div>
-                <div className="regalos-mesa-body">
-                  <p>Si estás pensando en un regalo te dejamos aquí algunas opciones que serían de utilidad para nosotros.</p>
-                </div>
-                <div className="regalos-mesa-fotter">
-                  <button>
-                    <a href={regalos_url}>Ir a Mesa de Regalos</a>
-                  </button>
-                </div>
-              </div>
+              
               
 
               
@@ -262,13 +277,10 @@ const Invitacion = () => {
                 </div>
                 <div className="lugares-text">
                   <p>{txt1} {txt2}</p>
-                  <span>en tu honor.</span>
+                  <span>en su honor.</span>
                 </div>
 
-                <section className="lugares-child">
-                  <p>Adoramos a sus hijos, pero queremos que en nuestra boda sólo tengan que preocuparse por pasarla increíble. </p>
-                  <span>Sólo adultos, por favor.</span>
-                </section>
+                
               </section>
 
               
@@ -285,12 +297,22 @@ const Invitacion = () => {
                   <h3>Confirmación</h3>
                 </div>
                 <div className="confirmacion-item-body">
-                  <p>Es muy importante para nosotros que confirmes tu asistencia.</p>
-                </div>
-                <div className="confirmacion-item-fotter">
-                  <button>
-                    <a href={`https://api.whatsapp.com/send?phone=52${data.confirmacion_novia}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar</a>
-                  </button>
+                  <p>Confirma tu asistencia aquí</p>
+                  <div className="confirmacion-item-body-items">
+                    <div className="confirmacion-item-body-items-novia">
+                      <img src="./icons/novia.svg" alt="icon_novia" />
+                      <button>
+                        <a href={`https://api.whatsapp.com/send?phone=52${data.confirmacion_novia}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar</a>
+                      </button>
+                    </div>
+
+                    <div className="confirmacion-item-body-items-novio">
+                      <img src="./icons/novio.svg" alt="icon_novio" />
+                      <button>
+                        <a href={`https://api.whatsapp.com/send?phone=52${data.confirmacion_novio}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar</a>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>

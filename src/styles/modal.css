@@ -8,7 +8,7 @@
 }
 .modal-tittle-2 p{
   font-size: 35px;
-  color:#f5f0ea;
+  
 }
 
 .modal-content{
@@ -18,7 +18,7 @@
 }
 
 .modal-button{
-  background-color:var(--back-color) ;
+  background-color:#8d5641;
   padding: 10px 15px;
   font-size: 20px;
   border-top-right-radius: 20px;
